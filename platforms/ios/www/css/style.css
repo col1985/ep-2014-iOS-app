@@ -503,6 +503,9 @@ div.main-content {
 div.main-content .center-page-title {
   text-align: center;
 }
+div.main-content .center-page-title h3 {
+  font-size: 20px;
+}
 #main-nav .btn {
   border-radius: 0;
 }

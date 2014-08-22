@@ -40,6 +40,8 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 		058DF7FD79414563A86473D1 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BB8A753643467C9CE7C797 /* CDVDevice.m */; };
+		CD897FB5C2714ADEBC6AAB43 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = B825B55B5D214B61A3929070 /* CDVNotification.m */; };
+		6FC4E0A1DA9A40D19DBAED84 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3804F57F46C74E178F7605B2 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,9 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "iOS-Angular-Template/config.xml"; sourceTree = "<group>"; };
 		D9BB8A753643467C9CE7C797 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		F6DD4D73A0CC41909C2440F1 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		B825B55B5D214B61A3929070 /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "org.apache.cordova.dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		93B5464960C846B384BADAE7 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		3804F57F46C74E178F7605B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
+				6FC4E0A1DA9A40D19DBAED84 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +212,7 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				3804F57F46C74E178F7605B2 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,6 +230,8 @@
 			children = (
 				D9BB8A753643467C9CE7C797 /* CDVDevice.m */,
 				F6DD4D73A0CC41909C2440F1 /* CDVDevice.h */,
+				B825B55B5D214B61A3929070 /* CDVNotification.m */,
+				93B5464960C846B384BADAE7 /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = "iOS-Angular-Template/Plugins";
@@ -409,6 +418,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				058DF7FD79414563A86473D1 /* CDVDevice.m in Sources */,
+				CD897FB5C2714ADEBC6AAB43 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

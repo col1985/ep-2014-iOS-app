@@ -58,7 +58,7 @@
         <script src="filters/sampleFilter.js"></script>
         
         <!-- Services / factories -->
-        <script src="services/SampleFactory.js"></script>
+        <script src="services/Dialog.js"></script>
         <script src="services/AppDataFactory.js"></script>
         
         <!-- controllers -->
@@ -73,5 +73,15 @@
         <script src="directives/navbar.js"></script>
         <script src="directives/app-footer.js"></script>
         <script src="directives/page-title.js"></script>
+
+
+        <script>
+            document.addEventListener("deviceready", function() {
+                function bootstrap() {
+                    angular.bootstrap(document.body, ['app']);
+                }
+                bootstrap();
+            }, false);
+        </script>
     </body>
 </html>
