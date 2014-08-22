@@ -315,6 +315,18 @@ table {
 /** 
  * Define Fonts to be used throughout the app 
  */
+@font-face {
+  font-family: OSReg;
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: OSLight;
+  src: url('fonts/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: OSBold;
+  src: url('fonts/OpenSans-Bold.ttf') format('truetype');
+}
 /** 
   * Primary fonts 
   */
@@ -386,7 +398,7 @@ table {
  */
 .view-animate-container {
   position: relative;
-  height: 100%;
+  height: 84.5%;
   background: #eee;
 }
 .view-animate.ng-enter,
@@ -427,7 +439,6 @@ table {
 }
 html,
 body {
-  font-size: 10px;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -435,6 +446,10 @@ body {
   margin: 0 0 0 0;
   -webkit-user-select: none;
   user-select: none;
+  font-family: 'OSReg';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px;
 }
 section {
   width: 100%;
@@ -443,6 +458,7 @@ section {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+  border-bottom: 3px solid #007aff;
 }
 section.drawer {
   width: 83%;
@@ -461,17 +477,15 @@ header .header-styles h3 {
   margin: 1em 0 1em 3.5em;
   color: #ffffff;
   letter-spacing: 2px;
-  font-family: 'OpenSans-Light';
-  src: url('fonts/OpenSans-Light.ttf') format('truetype');
+  font-family: 'OSLight';
   font-weight: normal;
   font-style: normal;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 header .header-styles small {
   color: #ffffff;
   letter-spacing: 2px;
-  font-family: 'OpenSans-Light';
-  src: url('fonts/OpenSans-Light.ttf') format('truetype');
+  font-family: 'OSLight';
   font-weight: normal;
   font-style: normal;
   font-size: 0.8em;
@@ -483,9 +497,8 @@ header .settings-btn {
   padding: 1.5em 1em 0 0;
 }
 div.main-content {
-  height: 49.2em;
+  height: auto;
   padding: 0 1em 0 1em;
-  overflow: scroll;
 }
 div.main-content .center-page-title {
   text-align: center;

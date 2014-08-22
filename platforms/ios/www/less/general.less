@@ -1,5 +1,5 @@
 html, body {
-    font-size: 10px; // set default font size === to 1em
+    // font-size: 10px; // set default font size === to 1em
     width:100%;
     height:100%;
     overflow: hidden;
@@ -7,13 +7,14 @@ html, body {
     .margins(0, 0, 0, 0);
     -webkit-user-select: none;
     user-select: none;
+    .font-face(@font1, normal, normal, 11px);
 }
 
 section {
     width: 100%;
     height: 100%;
     .flex-container(column);
-    // .box-shadow(10px 0 5px -2px #888);
+    border-bottom: 3px solid #007aff;
 }
 
 section.drawer {
@@ -32,7 +33,7 @@ header {
             .margins(1em, 0, 1em, 3.5em);
             color: @font-color;
             letter-spacing: 2px;
-            .font-face(@font2, normal, normal, 1.7em);
+            .font-face(@font2, normal, normal, 1.5em);
         }
 
         small {
@@ -52,9 +53,8 @@ header {
 }
 
 div.main-content {
-    height: 49.2em;
+    height: auto; //49.2em;
     .padding(0, 1em, 0, 1em);
-    overflow: scroll;
 
     .center-page-title {
         text-align: center;
