@@ -1,0 +1,41 @@
+
+/**
+ * Create a Parent flex container for flex
+ * items, default direction is row. Create
+ * column container by passing `column` as
+ * a param.  
+ */
+.flex-container(@direction: row) {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: @direction;
+    flex-direction: @direction;
+}
+
+/**
+ * 
+ *
+ */
+.flex-positioned(@direction: row, @position: center) {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: @direction;
+    flex-direction: @direction;
+    -webkit-align-items: @position;
+    align-items: @position;
+    -webkit-justify-content: @position;
+    justify-content: @position;
+}
+
+.flex-header() {
+    align-self: flex-start;
+}
+
+.flex-footer() {
+   align-self: flex-end;
+}
+
+.flex-item(@position: center) {
+    align-self: @position
+}
+

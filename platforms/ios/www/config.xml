@@ -1,11 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="%id%" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>%appname%</name>
+<widget id="com.feedhenry.apps.iOS-Angular-Template" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>iOS-Angular-Template</name>
     <description>
         This is an advanced hybrid app, built using Cordova
     </description>
     <content src="index.html" />
     <access origin="*" />
     <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="orientation" value="portrait" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+    </feature>
 </widget>

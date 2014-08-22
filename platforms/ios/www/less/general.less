@@ -1,0 +1,83 @@
+html, body {
+    font-size: 10px; // set default font size === to 1em
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    .padding();
+    .margins(0, 0, 0, 0);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    .flex-container(column);
+    // .box-shadow(10px 0 5px -2px #888);
+}
+
+section.drawer {
+    width: 83%;
+    height: 100%;
+    .bg-color(#eee);
+    .flex-container(column);
+}
+
+header {
+    width: 100%;
+    .flex-item(flex-start);
+
+    .header-styles {
+        h3 {
+            .margins(1em, 0, 1em, 3.5em);
+            color: @font-color;
+            letter-spacing: 2px;
+            .font-face(@font2, normal, normal, 1.7em);
+        }
+
+        small {
+            color: @font-color;
+            letter-spacing: 2px;
+            .font-face(@font2, normal, normal, 0.8em);
+        }
+    }
+
+    .back-btn {
+        .padding(1.5em, 0, 0, 1em);
+    }
+
+    .settings-btn {
+        .padding(1.5em, 1em, 0, 0);
+    }
+}
+
+div.main-content {
+    height: 49.2em;
+    .padding(0, 1em, 0, 1em);
+    overflow: scroll;
+
+    .center-page-title {
+        text-align: center;
+    }
+}
+
+#main-nav {
+    .btn {
+        border-radius: 0;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 1.5em;
+    .flex-item(flex-end);
+}
+
+.header-footer-bg {
+    .bg-color(@header-footer-color);
+    color: @font-color;
+}
+
+
+
+    
