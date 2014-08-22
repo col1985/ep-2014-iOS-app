@@ -23,7 +23,7 @@ angular.module('app')
 
         var confirm = function (msg, cb, title, labels) {
             $log.debug(msg, cb, title, labels);
-            if (typeof labels != Array) {
+            if (labels.length < 2) {
                 $log.error('[Dialog][confirm][labels] There must be more than 2 labels assigned for this API');
                 return;
             } else {
