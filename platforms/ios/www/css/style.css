@@ -555,3 +555,24 @@ footer {
   background: #5f3f71;
   color: #ffffff;
 }
+#stages {
+  font-size: 1.23em;
+  padding: 2em 0.5em 1em 0.5em;
+}
+#stages .icon {
+  font-size: 20px;
+}
+#stages .btn {
+  width: 20em;
+  margin: 0 auto 1.5em auto;
+}
+#stages .btn-default {
+  color: #5f3f71;
+  background-color: #fff;
+  border-color: #5f3f71;
+}
+#stages .btn-default:hover {
+  color: #fff;
+  background-color: #5f3f71;
+  border-color: #5f3f71;
+}

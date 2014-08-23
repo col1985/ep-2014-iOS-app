@@ -9,8 +9,8 @@ angular.module('app')
             link: function ($scope, $el, $attrs) {
                 angular.extend($scope, {
                     btn_1: 'home',
-                    btn_2: 'api',
-                    btn_3: 'about',
+                    btn_2: 'stages',
+                    btn_3: 'map',
                     btn_4: 'more',
                 });
             },

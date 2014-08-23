@@ -18,19 +18,39 @@ angular.module('app', [
             depth: 1,
             controller: 'MainCtrl'
         })
-        .when('/api', {
-            templateUrl: 'views/cordova-api.html',
+        .when('/stages', {
+            templateUrl: 'views/stages.html',
             depth: 2,
-            controller: 'ApiCtrl'
+            controller: 'StagesCtrl'
         })
-        .when('/about', {
-            templateUrl: 'views/about.html',
+        .when('/body', {
+            templateUrl: 'views/lineup/body.html',
             depth: 3,
-            controller: 'AboutCtrl'
+            controller: 'StagesCtrl'
+        })
+        .when('/bs-stage', {
+            templateUrl: 'views/lineup/bs-stage.html',
+            depth: 3,
+            controller: 'StagesCtrl'
+        })
+        .when('/upstage', {
+            templateUrl: 'views/lineup/upstage.html',
+            depth: 3,
+            controller: 'StagesCtrl'
+        })
+        .when('/earthship', {
+            templateUrl: 'views/lineup/earthship.html',
+            depth: 3,
+            controller: 'StagesCtrl'
+        })
+        .when('/map', {
+            templateUrl: 'views/map.html',
+            depth: 4,
+            controller: 'MapCtrl'
         })
         .when('/more', {
             templateUrl: 'views/more.html',
-            depth: 4,
+            depth: 5,
             controller: 'MoreCtrl'
         })
         .otherwise({
