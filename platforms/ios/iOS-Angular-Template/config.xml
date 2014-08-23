@@ -25,6 +25,10 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <preference name="StatusBarBackgroundColor" value="#000000" />
     <name>iOS-Angular-Template</name>
     <description>
         This is an advanced hybrid app, built using Cordova
@@ -34,7 +38,8 @@
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="webviewbounce" value="false" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="EnableViewportScale" value="true" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="orientation" value="portrait" />

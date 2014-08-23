@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
     <head>
-        <script src="http://192.168.1.102:8080/target/target-script-min.js#anonymous"></script>
+        <!-- // <script src="http://192.168.1.102:8080/target/target-script-min.js#anonymous"></script> -->
 
         <meta charset="utf-8">
         <meta name="HandheldFriendly" content="True">
@@ -27,7 +27,7 @@
 
          <!-- View Entry Point -->
         <section snap-content>
-            <app-header title="AngularJS" subtext="iOS Template"></app-header>
+            <app-header title="Electric Picnic" subtext="2014"></app-header>
             
             <div class="view-animate-container" ng-class="direction">
                 <div  ng-cloak ng-view class="view-animate"></div>
@@ -78,5 +78,15 @@
         <script src="directives/navbar.js"></script>
         <script src="directives/app-footer.js"></script>
         <script src="directives/page-title.js"></script>
+
+         <script>
+            document.addEventListener("deviceready", function() {
+                function bootstrap() {
+                    angular.bootstrap(document.body, ['app']);
+                }
+                bootstrap();
+
+            }, false);
+        </script>
     </body>
 </html>

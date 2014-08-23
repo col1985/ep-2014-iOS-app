@@ -327,9 +327,19 @@ table {
   font-family: OSBold;
   src: url('fonts/OpenSans-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: Yellowtail;
+  src: url('fonts/Yellowtail-Regular.ttf') format('truetype');
+}
 /** 
   * Primary fonts 
   */
+/**
+ * header / footer background color 
+ */
+/**
+ * header / footer background color 
+ */
 /**
  * header / footer background color 
  */
@@ -352,6 +362,10 @@ table {
 /**
  * genaic mixin for margins that 
  * defaults to center element
+ */
+/**
+ * sets backgriund color using 
+ * CSS3 background property
  */
 /**
  * sets backgriund color using 
@@ -399,7 +413,10 @@ table {
 .view-animate-container {
   position: relative;
   height: 84.5%;
-  background: #eee;
+  background: url('imgs/ep_bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
 }
 .view-animate.ng-enter,
 .view-animate.ng-leave {
@@ -458,7 +475,7 @@ section {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  border-bottom: 3px solid #007aff;
+  border-bottom: 3px solid #5f3f71;
 }
 section.drawer {
   width: 83%;
@@ -474,27 +491,27 @@ header {
   align-self: flex-start;
 }
 header .header-styles h3 {
-  margin: 1em 0 1em 3.5em;
+  margin: 1.7em 0 1em 3em;
   color: #ffffff;
-  letter-spacing: 2px;
-  font-family: 'OSLight';
+  letter-spacing: 0.25em;
+  font-family: 'Yellowtail';
   font-weight: normal;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 header .header-styles small {
   color: #ffffff;
   letter-spacing: 2px;
-  font-family: 'OSLight';
+  font-family: 'Yellowtail';
   font-weight: normal;
   font-style: normal;
   font-size: 0.8em;
 }
 header .back-btn {
-  padding: 1.5em 0 0 1em;
+  padding: 2.6em 0 0 1em;
 }
 header .settings-btn {
-  padding: 1.5em 1em 0 0;
+  padding: 2.6em 1em 0 0;
 }
 div.main-content {
   height: auto;
@@ -504,10 +521,30 @@ div.main-content .center-page-title {
   text-align: center;
 }
 div.main-content .center-page-title h3 {
-  font-size: 20px;
+  font-family: 'Yellowtail';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  color: #000000;
+}
+div.main-content .center-page-title h3 small {
+  color: #000000;
+}
+div.main-content .panel {
+  background: rgba(176, 145, 180, 0.6);
 }
 #main-nav .btn {
   border-radius: 0;
+}
+#main-nav .btn-default {
+  color: #5f3f71;
+  background-color: #fff;
+  border-color: #5f3f71;
+}
+#main-nav .btn-default:hover {
+  color: #fff;
+  background-color: #5f3f71;
+  border-color: #5f3f71;
 }
 footer {
   width: 100%;
@@ -515,6 +552,6 @@ footer {
   align-self: flex-end;
 }
 .header-footer-bg {
-  background: #007aff;
+  background: #5f3f71;
   color: #ffffff;
 }

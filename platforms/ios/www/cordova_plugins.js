@@ -13,13 +13,21 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
+        "id": "org.apache.cordova.statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.device": "0.2.11",
-    "org.apache.cordova.dialogs": "0.2.9"
+    "org.apache.cordova.dialogs": "0.2.9",
+    "org.apache.cordova.statusbar": "0.1.7"
 }
 // BOTTOM OF METADATA
 });
