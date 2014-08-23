@@ -556,8 +556,9 @@ footer {
   color: #ffffff;
 }
 #stages {
-  font-size: 1.23em;
-  padding: 2em 0.5em 1em 0.5em;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.5em 0.6em 0.5em 0.6em;
 }
 #stages .icon {
   font-size: 20px;
