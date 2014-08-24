@@ -1,9 +1,10 @@
 angular.module('app')
-    .controller('StagesCtrl', ['$scope', '$log', 'AppDataFactory', 'FavsManager', 'Dialog',
-        function StagesCtrl($scope, $log, AppDataFactory, FavsManager, Dialog) {
+    .controller('StagesCtrl', ['$scope', '$log', 'AppDataFactory', 'FavsManager',
+        function StagesCtrl($scope, $log, AppDataFactory, FavsManager) {
             'use strict';
 
             angular.extend($scope, {
+                headLiners: AppDataFactory.lineup['HEADLINERS'],
                 bodyNSoul: AppDataFactory.lineup['BODY_&_SOUL'],
                 comedy: AppDataFactory.lineup['COMEDY'],
                 saltyDog: AppDataFactory.lineup['SALTY_DOG'],
