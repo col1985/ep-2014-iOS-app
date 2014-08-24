@@ -12,14 +12,10 @@ angular.module('app')
             });
 
             $scope.addFavourite = function (act) {
-                Dialog.alert('Remove ' + act + ' from favourites.', function () {
-                    // $log.error('Item cannot be saved to favourites.');
-                    if (angular.isDefined(act)) {
-                        $log.debug('addFavourite', act);
-                        FavsManager.addToFavs(act);
-                    }
-                }, 'Remove from Favourites', 'OK');
-
+                if (angular.isDefined(act)) {
+                    $log.debug('addFavourite', act);
+                    FavsManager.addToFavs(act);
+                }
             };
             // $log.debug('StagesCtrl ::', $scope);
         }

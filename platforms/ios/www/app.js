@@ -154,4 +154,11 @@ angular.module('app', [
 
         // };
     });
+
+    // if (angular.isDefined(navigator.splashscreen)) {
+    setTimeout(function () {
+        logger.info('Hiding splashscreen..');
+        navigator.splashscreen.hide();
+    }, 2500);
+    // }
 });

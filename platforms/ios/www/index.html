@@ -89,6 +89,10 @@
                 }
                 bootstrap();
 
+                if(typeof navigator.splashscreen !== undefined) {
+                    // display splasscreen
+                    navigator.splashscreen.show();
+                }
             }, false);
         </script>
     </body>
