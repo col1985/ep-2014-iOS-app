@@ -103,19 +103,19 @@ angular.module('app', [
             depth: 18,
             controller: 'StagesCtrl'
         })
-        .when('/map', {
-            templateUrl: 'views/map.html',
-            depth: 19,
-            controller: 'MapCtrl'
-        })
-        .when('/more', {
-            templateUrl: 'views/more.html',
-            depth: 20,
-            controller: 'MoreCtrl'
-        })
-        .otherwise({
-            redirectTo: '/home'
-        });
+    // .when('/map', {
+    //     templateUrl: 'views/map.html',
+    //     depth: 19,
+    //     controller: 'MapCtrl'
+    // })
+    // .when('/more', {
+    //     templateUrl: 'views/more.html',
+    //     depth: 20,
+    //     controller: 'MoreCtrl'
+    // })
+    .otherwise({
+        redirectTo: '/home'
+    });
 
 }).run(function ($window, $rootScope, $log, $location) {
     'use strict';
