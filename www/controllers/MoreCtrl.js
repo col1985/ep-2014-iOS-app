@@ -6,8 +6,8 @@ angular.module('app')
             $log.debug('MoreCtrl ::', $scope);
 
             $scope.webview = function () {
-                $window.open('http://electricpicnic.ie/', '_blank');
-            }
+                $window.open('http://electricpicnic.ie/', '_system');
+            };
             // $rootScope.showBackBtn = true;
         }
     ]);
