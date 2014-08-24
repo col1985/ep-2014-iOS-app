@@ -489,6 +489,8 @@ section.drawer {
 section.drawer .favs-header {
   border-top: 20px solid #5f3f71;
   position: fixed;
+  left: 0;
+  top: 0;
   z-index: 1;
   background: #eeeeee;
 }
@@ -499,7 +501,7 @@ section.drawer .favs-header .favs-header-styles {
   border-bottom: 1px solid rgba(176, 145, 180, 0.6);
 }
 section.drawer .favs-header .favs-header-styles h3 {
-  padding-left: 20%;
+  padding-left: 37%;
   font-family: 'Yellowtail';
   font-weight: normal;
   font-style: normal;
@@ -510,10 +512,10 @@ section.drawer .favs-header .favs-header-styles h3 {
   z-index: 1;
 }
 section.drawer .favs-list {
-  height: 800px;
+  position: absolute;
+  height: auto;
   overflow: auto;
-  margin-top: 6.7em;
-  padding-top: 0.5em;
+  top: 7.5em;
 }
 section.drawer .favs-list .fav-item {
   line-height: 20px;

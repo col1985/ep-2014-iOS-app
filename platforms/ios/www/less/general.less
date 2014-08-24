@@ -26,6 +26,8 @@ section.drawer {
     .favs-header {
         border-top: 20px solid @nav-bar-color;
         position: fixed;
+        left: 0;
+        top: 0;
         z-index: 1;
         .bg-color(#eee);
     
@@ -36,7 +38,7 @@ section.drawer {
             border-bottom: 1px solid @panel-color;
 
             h3 {
-                padding-left: 20%;
+                padding-left: 37%;
                 .font-face(@font4, normal, normal, 1.7em);
                 letter-spacing: 0.25em;
                 margin-top: 10px;
@@ -47,10 +49,10 @@ section.drawer {
     }
 
     .favs-list {
-        height: 800px;
+        position: absolute;
+        height: auto;
         overflow: auto;
-        margin-top: 6.7em;
-        padding-top: 0.5em;
+        top: 7.5em;
 
         .fav-item {
             line-height: 20px;
