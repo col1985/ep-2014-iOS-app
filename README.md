@@ -10,8 +10,8 @@ Check out the acts at each of the stages and select the title of the act you wan
 Colúm Bennett
 
 ###Screenshots
-[Home Page](https://github.com/col1985/ep-2014-iOS-app/blob/ep/screenshots/home.png)
-[Stages Page](https://github.com/col1985/ep-2014-iOS-app/blob/ep/screenshots/stages.png)
-[Sample Acts Page](https://github.com/col1985/ep-2014-iOS-app/blob/ep/screenshots/sample-acts-page.png)
-[Favourites Page](https://github.com/col1985/ep-2014-iOS-app/blob/ep/screenshots/favs-list.png)
+![Home Page](https://github.com/col1985/ep-2014-iOS-app/screenshots/home.png)
+![Stages Page](https://github.com/col1985/ep-2014-iOS-app/screenshots/stages.png)
+![Sample Acts Page](https://github.com/col1985/ep-2014-iOS-app/screenshots/sample-acts-page.png)
+![Favourites Page](https://github.com/col1985/ep-2014-iOS-app/screenshots/favs-list.png)
   
