@@ -10,28 +10,54 @@ angular.module('app')
 
             // add to favs array
             FavsManager.prototype.addToFavs = function (actName) {
+                var favs = this.getSavedFavs();
+                var hasFavSaved = null;
+
                 if (angular.isDefined(actName)) {
+                    hasFavSaved = _.indexOf(favs, actName);
+                }
+
+                if (hasFavSaved === -1) {
                     this.favourites.push(actName);
+                    this.cacheFav(this.favourites);
                     $log.debug('[FavsManager] :: addToFavs ', this.favourites);
                 } else {
-                    Dialog.alert('Item cannot be saved to favourites.', function () {
-                        $log.error('Item cannot be saved to favourites.');
+                    Dialog.alert('Duplicate items cannot be saved to favourites list.', function () {
+                        $log.error('Duplicate Item cannot be saved to favourites.');
                     }, 'Save to Favourites', 'OK');
                 }
             };
 
             // return favs array
             FavsManager.prototype.getSavedFavs = function () {
-                // if (this.favourites.length > 0) {
-                return this.favourites;
-                // } else if (this.favourites.length === 0) {
-                // return ['No favourites saved at this time.'];
-                // } else {
-                //     Dialog.alert('Problem loading Favourites. Try again.', function () {
-                //         $log.error('Problem loading Favourites. Try again.');
-                //     }, 'Save to Favourites', 'OK');
-                // // }
+                if (angular.isDefined(localStorage['favs'])) {
+                    this.favourites = this.getCachedFav();
+                    return this.favourites;
+                } else if (this.favourites) {
+                    return this.favourites;
+                } else {
+                    Dialog.alert('Problem loading Favourites. Try again.', function () {
+                        $log.error('Problem loading Favourites. Try again.');
+                    }, 'Save to Favourites', 'OK');
+                }
+            };
 
+
+            FavsManager.prototype.cacheFav = function (favArr) {
+                if (angular.isArray(favArr)) {
+                    localStorage.setItem('favs', JSON.stringify(favArr));
+                } else {
+                    $log.error('[FavsManager] [cacheFav] :: favArr is not defined');
+                }
+            };
+
+
+            FavsManager.prototype.getCachedFav = function () {
+                if (angular.isDefined(localStorage['favs'])) {
+                    return JSON.parse(localStorage['favs']);
+                } else {
+                    $log.error('[FavsManager] [getCacheFav] :: no fav items in localStorage.');
+                }
             };
 
             // remove from favs array

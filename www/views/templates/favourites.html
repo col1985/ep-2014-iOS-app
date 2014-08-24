@@ -9,6 +9,7 @@
 <div class="favs-list">
     <div ng-repeat="item in favs" class="fav-item">
         <p class="pull-left fav-label">{{ item }}</p>
-        <span class="pull-right icon icon-close"></span>
+        <span ng-click="removeItem(item)" class="pull-right icon icon-close"></span>
+        <!-- <small>{{}}</small> -->
     </div>
 </div>

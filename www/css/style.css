@@ -514,10 +514,12 @@ section.drawer .favs-header .favs-header-styles h3 {
 section.drawer .favs-list {
   position: absolute;
   height: auto;
+  width: 100%;
   overflow: auto;
   top: 7.5em;
 }
 section.drawer .favs-list .fav-item {
+  font-size: 1.3em;
   line-height: 20px;
   display: inline-block;
   width: 100%;

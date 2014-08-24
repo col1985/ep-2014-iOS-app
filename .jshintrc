@@ -14,7 +14,8 @@
         "cordova"       : true,
         "phonegap"      : true,
         "alert"         : true,
-        "confirm"       : true
+        "confirm"       : true,
+        "localStorage"  : true
     },
     
     // Development.

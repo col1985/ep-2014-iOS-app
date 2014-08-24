@@ -3,14 +3,14 @@ angular.module('app')
         function FavsCtrl($scope, $log, FavsManager) {
             'use strict';
 
-            var getFavs = FavsManager.getSavedFavs();
+            $scope.favs = FavsManager.getSavedFavs();
 
-            angular.extend($scope, {
-                favs: getFavs
-            });
+            $scope.removeItem = function (favItem) {
+                FavsManager.removeFromFavs(favItem);
+            };
 
             $scope.$watchCollection('favs', function (newVal) {
-                $log.debug('favs', newVal);
+                // $log.debug('favs', newVal);
                 $scope.favs = newVal;
             }, true);
         }
