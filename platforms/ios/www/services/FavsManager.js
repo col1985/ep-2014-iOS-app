@@ -5,44 +5,41 @@ angular.module('app')
 
             // constructor
             function FavsManager() {
-                this.favourites = [];
+                if (angular.isDefined(localStorage['favs'])) {
+                    this.favourites = this.getCachedFav();
+                    console.log(this.favourites);
+                } else {
+                    this.favourites = [];
+                }
             }
 
             // add to favs array
             FavsManager.prototype.addToFavs = function (actName) {
-                var favs = this.getSavedFavs();
-                var hasFavSaved = null;
+                if (this.favourites.length > 0 && angular.isString(actName)) {
 
-                if (angular.isDefined(actName)) {
-                    hasFavSaved = _.indexOf(favs, actName);
-                }
+                    if (_.indexOf(this.favourites, actName) === -1) {
+                        this.favourites.push(actName);
+                        this.cacheFav(this.favourites);
+                        $log.debug('[FavsManager] :: addToFavs ', this.favourites);
+                    } else {
+                        Dialog.alert('Duplicate items cannot be saved to favourites list.', function () {
+                            $log.error('Duplicate Item cannot be saved to favourites.');
+                        }, 'Save to Favourites', 'OK');
+                    }
 
-                if (hasFavSaved === -1) {
+                } else {
                     this.favourites.push(actName);
                     this.cacheFav(this.favourites);
                     $log.debug('[FavsManager] :: addToFavs ', this.favourites);
-                } else {
-                    Dialog.alert('Duplicate items cannot be saved to favourites list.', function () {
-                        $log.error('Duplicate Item cannot be saved to favourites.');
-                    }, 'Save to Favourites', 'OK');
                 }
             };
 
             // return favs array
             FavsManager.prototype.getSavedFavs = function () {
-                if (angular.isDefined(localStorage['favs'])) {
-                    this.favourites = this.getCachedFav();
-                    return this.favourites;
-                } else if (this.favourites) {
-                    return this.favourites;
-                } else {
-                    Dialog.alert('Problem loading Favourites. Try again.', function () {
-                        $log.error('Problem loading Favourites. Try again.');
-                    }, 'Save to Favourites', 'OK');
-                }
+                return this.favourites;
             };
 
-
+            // save favs to localStorage
             FavsManager.prototype.cacheFav = function (favArr) {
                 if (angular.isArray(favArr)) {
                     localStorage.setItem('favs', JSON.stringify(favArr));
@@ -51,7 +48,7 @@ angular.module('app')
                 }
             };
 
-
+            // get favs from localStorage
             FavsManager.prototype.getCachedFav = function () {
                 if (angular.isDefined(localStorage['favs'])) {
                     return JSON.parse(localStorage['favs']);
@@ -62,18 +59,20 @@ angular.module('app')
 
             // remove from favs array
             FavsManager.prototype.removeFromFavs = function (actName) {
-                if (angular.isUndefined(actName)) {
+                if (angular.isDefined(actName)) {
+
+                    // return index of act
+                    var indexOfAct = _.indexOf(this.favourites, actName);
+
+                    if (indexOfAct != -1) {
+                        // remove from array
+                        this.favourites.splice(indexOfAct, 1);
+                    }
+
+                } else {
                     Dialog.alert('Item cannot be removed from favourites.', function () {
                         $log.error('Item cannot be saved to favourites.');
                     }, 'Save to Favourites', 'OK');
-                } else {
-                    var indexOfAct = _.indexOf(this.favourites, actName);
-
-                    if (angular.isNumber(indexOfAct)) {
-                        this.favourites.slice(indexOfAct);
-                    } else {
-                        $log.error('indexOfAct is cannot be found, item cannot be removed from favourites.');
-                    }
                 }
             };
 
