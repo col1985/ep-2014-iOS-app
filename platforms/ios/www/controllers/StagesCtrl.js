@@ -1,6 +1,6 @@
 angular.module('app')
-    .controller('StagesCtrl', ['$scope', '$log', 'AppDataFactory', 'FavsManager',
-        function StagesCtrl($scope, $log, AppDataFactory, FavsManager) {
+    .controller('StagesCtrl', ['$scope', '$log', 'AppDataFactory', 'FavsManager', 'Dialog',
+        function StagesCtrl($scope, $log, AppDataFactory, FavsManager, Dialog) {
             'use strict';
 
             angular.extend($scope, {
@@ -12,10 +12,14 @@ angular.module('app')
             });
 
             $scope.addFavourite = function (act) {
-                if (angular.isDefined(act)) {
-                    $log.debug('addFavourite', act);
-                    FavsManager.addToFavs(act);
-                }
+                Dialog.alert('Remove ' + act + ' from favourites.', function () {
+                    // $log.error('Item cannot be saved to favourites.');
+                    if (angular.isDefined(act)) {
+                        $log.debug('addFavourite', act);
+                        FavsManager.addToFavs(act);
+                    }
+                }, 'Remove from Favourites', 'OK');
+
             };
             // $log.debug('StagesCtrl ::', $scope);
         }

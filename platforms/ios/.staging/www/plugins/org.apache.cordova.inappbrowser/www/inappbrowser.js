@@ -95,5 +95,4 @@ module.exports = function(strUrl, strWindowName, strWindowFeatures) {
     exec(cb, cb, "InAppBrowser", "open", [strUrl, strWindowName, strWindowFeatures]);
     return iab;
 };
-
 });

@@ -8,6 +8,8 @@ angular.module('app')
         }
 
         var alert = function (msg, cb, title, done) {
+            $window.navigator.notification.beep(3);
+            $window.navigator.notification.vibrate(2000);
             $window.navigator.notification.alert(msg, cb, title, done);
         };
 
