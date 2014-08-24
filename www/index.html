@@ -8,7 +8,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
         
-        <title>Angular iOS Template</title>
+        <title>Electric Picnic 2014</title>
       
         <script src="feedhenry.js"></script>
         
@@ -31,8 +31,8 @@
             <nav-bar></nav-bar>    
         </section>
 
-        <section snap-drawer="right" class="drawer">
-            Hello I am a drawer.
+        <section ng-controller="FavsCtrl" snap-drawer="right" class="drawer">
+            <favourites></favourites>
         </section>
 
         <!-- loading overlay --> 
@@ -66,10 +66,12 @@
         <script src="controllers/MainCtrl.js"></script>
         <script src="controllers/StagesCtrl.js"></script>
         <script src="controllers/MapCtrl.js"></script>
+        <script src="controllers/FavsCtrl.js"></script>
         <script src="controllers/MoreCtrl.js"></script>
         
         <!-- directives -->
         <script src="directives/loading.js"></script>
+        <script src="directives/favourites.js"></script>
         <script src="directives/app-header.js"></script>
         <script src="directives/navbar.js"></script>
         <script src="directives/app-footer.js"></script>

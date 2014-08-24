@@ -3,6 +3,7 @@
     <page-title title="Upstage" sub-text="Acts"></page-title>
 
     <div id="stages" class="panel">
-        | <span ng-repeat="act in bodyNSoul.UPSTAGE" >{{ act }} | </span>
+        | <span ng-repeat="act in bodyNSoul.UPSTAGE" 
+                ng-click="addFavourite(act)">{{ act }} | </span>
     </div>
 </div>

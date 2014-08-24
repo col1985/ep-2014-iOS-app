@@ -22,6 +22,57 @@ section.drawer {
     height: 100%;
     .bg-color(#eee);
     .flex-container(column);
+
+    .favs-header {
+        border-top: 20px solid @nav-bar-color;
+        position: fixed;
+        z-index: 1;
+        .bg-color(#eee);
+    
+        .favs-header-styles {
+            .bg-color(#eee);
+            width: 100%;
+            height: 5em;
+            border-bottom: 1px solid @panel-color;
+
+            h3 {
+                padding-left: 20%;
+                .font-face(@font4, normal, normal, 1.7em);
+                letter-spacing: 0.25em;
+                margin-top: 10px;
+                position: fixed;
+                z-index: 1;
+            }
+        }   
+    }
+
+    .favs-list {
+        height: 800px;
+        overflow: auto;
+        margin-top: 6.7em;
+        padding-top: 0.5em;
+
+        .fav-item {
+            line-height: 20px;
+            display: inline-block;
+            width: 100%;
+
+            .fav-label {
+                padding-left: 1.5em;
+                width: 88%;
+                overflow:hidden; 
+                white-space:nowrap; 
+                text-overflow: ellipsis;
+
+                .time {}
+            }
+
+            .icon {
+                padding-right: 0.5em;
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 header {

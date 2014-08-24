@@ -3,6 +3,7 @@
     <page-title title="Comedy" sub-text="Acts"></page-title>
 
     <div id="stages" class="panel">
-        | <span ng-repeat="act in comedy">{{ act }} | </span>
+        | <span ng-repeat="act in comedy"
+                ng-click="addFavourite(act)">{{ act }} | </span>
     </div>
 </div>

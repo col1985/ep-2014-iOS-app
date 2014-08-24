@@ -1,0 +1,14 @@
+<header class="favs-header">
+    <div class="favs-header-styles">
+        <h3>Favourite Acts
+            <span class="icon icon-star-filled"></span>
+        </h3>
+    </div>
+</header>
+
+<div class="favs-list">
+    <div ng-repeat="item in favs" class="fav-item">
+        <p class="pull-left fav-label">{{ item }}</p>
+        <span class="pull-right icon icon-close"></span>
+    </div>
+</div>

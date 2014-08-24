@@ -2,6 +2,7 @@
     <page-title title="Main Stage Inna Liev Yard" sub-text="Acts"></page-title>
 
     <div id="stages" class="panel">
-        | <span ng-repeat="act in trenchTown.MAIN_STAGE_INNA_LIVE_YARD" >{{ act }} | </span>
+        | <span ng-repeat="act in trenchTown.MAIN_STAGE_INNA_LIVE_YARD" 
+                ng-click="addFavourite(act)">{{ act }} | </span>
     </div>
 </div>
