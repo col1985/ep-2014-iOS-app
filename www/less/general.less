@@ -109,7 +109,7 @@ header {
 }
 
 div.main-content {
-    height: auto;
+    // height: auto;
     .padding(0, 1em, 0, 1em);
 
     .center-page-title {
@@ -126,7 +126,14 @@ div.main-content {
     }
 
     .panel {
+        font-size: 1.2em;
+         overflow: auto;
+        height: 30em;
         .bg-color(@panel-color);
+
+        span {
+            line-height: 25px;
+        }
     }
 }
 
@@ -162,6 +169,7 @@ footer {
 #stages {
     font-size: 1.2em;
     font-weight: 600;
+    // height 500px;
 
     .icon {
         font-size: 20px;
@@ -174,6 +182,15 @@ footer {
         width: 20em;
         .margins(0, auto, 1.5em, auto);
     }
+
+    // .panel {
+    //     overflow: auto;
+    //     height: 30em;
+
+    //     span {
+    //         line-height: 25px;
+    //     }
+    // }
 
     .btn-default {
         color: @nav-bar-color;
