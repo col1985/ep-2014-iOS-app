@@ -10,6 +10,7 @@
         "exports"       : true,
         "jquery"        : true,
         "underscore"    : true,
+        "_"             : true,
         "cordova"       : true,
         "phonegap"      : true,
         "alert"         : true,
