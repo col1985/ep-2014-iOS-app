@@ -1,7 +1,11 @@
 angular.module('app')
-    .controller('MapCtrl', ['$scope', '$log',
-        function MapCtrl($scope, $log) {
+    .controller('MapCtrl', ['$window', '$scope', '$log',
+        function MapCtrl($window, $scope, $log) {
             'use strict';
+
+            $scope.loadMap = function () {
+                $window.open('./../css/imgs/ep_map.png', '_blank');
+            };
 
             $log.debug('MapCtrl ::', $scope);
         }
