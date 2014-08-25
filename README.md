@@ -20,5 +20,5 @@ Colúm Bennett
 ![Acts Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/acts-page.png)
 ![Favourites Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/favs-list.png)
 ![Map Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/ep_map.png)
-![EP Website](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/offical_website.png)
+![EP Website](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/official_website.png)
   
