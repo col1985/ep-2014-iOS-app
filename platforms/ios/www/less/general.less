@@ -152,6 +152,22 @@ div.main-content {
         color: #fff;
         background-color: @nav-bar-color;
         border-color: @nav-bar-color;
+
+        .icon-map:hover {
+            .bg-image('./imgs/icon-map-hover.png', no-repeat, center, center, 100%);
+            display: inline-block;
+            height: 24px;
+            width: 1.25em;
+            color: @nav-bar-color;
+        }
+    }
+
+    .icon-map {
+        .bg-image('./imgs/icon-map.png', no-repeat, center, center, 100%);
+        display: inline-block;
+        height: 24px;
+        width: 1.2em;
+        color: @nav-bar-color;
     }
 }
 

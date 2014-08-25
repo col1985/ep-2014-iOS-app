@@ -600,6 +600,26 @@ div.main-content .panel span {
   background-color: #5f3f71;
   border-color: #5f3f71;
 }
+#main-nav .btn-default:hover .icon-map:hover {
+  background: url('imgs/icon-map-hover.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  display: inline-block;
+  height: 24px;
+  width: 1.25em;
+  color: #5f3f71;
+}
+#main-nav .icon-map {
+  background: url('imgs/icon-map.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  display: inline-block;
+  height: 24px;
+  width: 1.2em;
+  color: #5f3f71;
+}
 footer {
   width: 100%;
   height: 1.5em;

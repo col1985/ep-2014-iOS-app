@@ -18,6 +18,5 @@ angular.module('app')
                     FavsManager.addToFavs(act);
                 }
             };
-            // $log.debug('StagesCtrl ::', $scope);
         }
     ]);
