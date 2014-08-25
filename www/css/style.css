@@ -327,9 +327,19 @@ table {
   font-family: OSBold;
   src: url('fonts/OpenSans-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: Yellowtail;
+  src: url('fonts/Yellowtail-Regular.ttf') format('truetype');
+}
 /** 
   * Primary fonts 
   */
+/**
+ * header / footer background color 
+ */
+/**
+ * header / footer background color 
+ */
 /**
  * header / footer background color 
  */
@@ -352,6 +362,10 @@ table {
 /**
  * genaic mixin for margins that 
  * defaults to center element
+ */
+/**
+ * sets backgriund color using 
+ * CSS3 background property
  */
 /**
  * sets backgriund color using 
@@ -398,8 +412,11 @@ table {
  */
 .view-animate-container {
   position: relative;
-  height: 84.5%;
-  background: #eee;
+  height: 83.5%;
+  background: url('imgs/ep_bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
 }
 .view-animate.ng-enter,
 .view-animate.ng-leave {
@@ -458,7 +475,7 @@ section {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  border-bottom: 3px solid #007aff;
+  border-bottom: 3px solid #5f3f71;
 }
 section.drawer {
   width: 83%;
@@ -469,45 +486,119 @@ section.drawer {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
+section.drawer .favs-header {
+  border-top: 20px solid #5f3f71;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: #eeeeee;
+}
+section.drawer .favs-header .favs-header-styles {
+  background: #eeeeee;
+  width: 100%;
+  height: 5em;
+  border-bottom: 1px solid rgba(176, 145, 180, 0.6);
+}
+section.drawer .favs-header .favs-header-styles h3 {
+  padding-left: 37%;
+  font-family: 'Yellowtail';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.7em;
+  letter-spacing: 0.25em;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 1;
+}
+section.drawer .favs-list {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  overflow: auto;
+  top: 7.5em;
+}
+section.drawer .favs-list .fav-item {
+  font-size: 1.3em;
+  line-height: 20px;
+  display: inline-block;
+  width: 100%;
+}
+section.drawer .favs-list .fav-item .fav-label {
+  padding-left: 1.5em;
+  width: 88%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+section.drawer .favs-list .fav-item .icon {
+  padding-right: 0.5em;
+  font-size: 20px;
+}
 header {
   width: 100%;
   align-self: flex-start;
 }
 header .header-styles h3 {
-  margin: 1em 0 1em 3.5em;
+  margin: 1.7em 0 1em 3em;
   color: #ffffff;
-  letter-spacing: 2px;
-  font-family: 'OSLight';
+  letter-spacing: 0.25em;
+  font-family: 'Yellowtail';
   font-weight: normal;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 header .header-styles small {
   color: #ffffff;
   letter-spacing: 2px;
-  font-family: 'OSLight';
+  font-family: 'Yellowtail';
   font-weight: normal;
   font-style: normal;
   font-size: 0.8em;
 }
 header .back-btn {
-  padding: 1.5em 0 0 1em;
+  padding: 2.6em 0 0 1em;
 }
 header .settings-btn {
-  padding: 1.5em 1em 0 0;
+  padding: 2.6em 1em 0 0;
 }
 div.main-content {
-  height: auto;
   padding: 0 1em 0 1em;
 }
 div.main-content .center-page-title {
   text-align: center;
 }
 div.main-content .center-page-title h3 {
-  font-size: 20px;
+  font-family: 'Yellowtail';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  color: #000000;
+}
+div.main-content .center-page-title h3 small {
+  color: #000000;
+}
+div.main-content .panel {
+  font-size: 1.2em;
+  overflow: auto;
+  height: 29.5em;
+  background: rgba(176, 145, 180, 0.6);
+}
+div.main-content .panel span {
+  line-height: 25px;
 }
 #main-nav .btn {
   border-radius: 0;
+}
+#main-nav .btn-default {
+  color: #5f3f71;
+  background-color: #fff;
+  border-color: #5f3f71;
+}
+#main-nav .btn-default:hover {
+  color: #fff;
+  background-color: #5f3f71;
+  border-color: #5f3f71;
 }
 footer {
   width: 100%;
@@ -515,6 +606,28 @@ footer {
   align-self: flex-end;
 }
 .header-footer-bg {
-  background: #007aff;
+  background: #5f3f71;
   color: #ffffff;
+}
+#stages {
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.5em 0.6em 0.5em 0.6em;
+}
+#stages .icon {
+  font-size: 20px;
+}
+#stages .btn {
+  width: 20em;
+  margin: 0 auto 1.5em auto;
+}
+#stages .btn-default {
+  color: #5f3f71;
+  background-color: #fff;
+  border-color: #5f3f71;
+}
+#stages .btn-default:hover {
+  color: #fff;
+  background-color: #5f3f71;
+  border-color: #5f3f71;
 }

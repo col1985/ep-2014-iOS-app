@@ -14,7 +14,7 @@ section {
     width: 100%;
     height: 100%;
     .flex-container(column);
-    border-bottom: 3px solid #007aff;
+    border-bottom: 3px solid @nav-bar-color;
 }
 
 section.drawer {
@@ -22,45 +22,117 @@ section.drawer {
     height: 100%;
     .bg-color(#eee);
     .flex-container(column);
+
+    .favs-header {
+        border-top: 20px solid @nav-bar-color;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        .bg-color(#eee);
+    
+        .favs-header-styles {
+            .bg-color(#eee);
+            width: 100%;
+            height: 5em;
+            border-bottom: 1px solid @panel-color;
+
+            h3 {
+                padding-left: 37%;
+                .font-face(@font4, normal, normal, 1.7em);
+                letter-spacing: 0.25em;
+                margin-top: 10px;
+                position: fixed;
+                z-index: 1;
+            }
+        }   
+    }
+
+    .favs-list {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        overflow: auto;
+        top: 7.5em;
+
+        .fav-item {
+            font-size: 1.3em;
+            line-height: 20px;
+            display: inline-block;
+            width: 100%;
+
+            .fav-label {
+                padding-left: 1.5em;
+                width: 88%;
+                overflow:hidden; 
+                white-space:nowrap; 
+                text-overflow: ellipsis;
+
+                .time {}
+            }
+
+            .icon {
+                padding-right: 0.5em;
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 header {
     width: 100%;
     .flex-item(flex-start);
+    // text-transform: lowercase;
 
     .header-styles {
         h3 {
-            .margins(1em, 0, 1em, 3.5em);
+            .margins(1.7em, 0, 1em, 3em);
             color: @font-color;
-            letter-spacing: 2px;
-            .font-face(@font2, normal, normal, 1.5em);
+            letter-spacing: 0.25em;
+            .font-face(@font4, normal, normal, 1.7em);
         }
 
         small {
             color: @font-color;
             letter-spacing: 2px;
-            .font-face(@font2, normal, normal, 0.8em);
+            .font-face(@font4, normal, normal, 0.8em);
         }
     }
 
     .back-btn {
-        .padding(1.5em, 0, 0, 1em);
+        .padding(2.6em, 0, 0, 1em);
     }
 
     .settings-btn {
-        .padding(1.5em, 1em, 0, 0);
+        .padding(2.6em, 1em, 0, 0);
     }
 }
 
 div.main-content {
-    height: auto; //49.2em;
+    // height: auto;
     .padding(0, 1em, 0, 1em);
 
     .center-page-title {
         text-align: center;
 
         h3 {
-            font-size: 20px;
+            .font-face(@font4, normal, normal, 25px);
+            color: #000000;
+
+            small {
+                color: #000000;
+            }
+        }
+    }
+
+    .panel {
+        font-size: 1.2em;
+         overflow: auto;
+        height: 29.5em;
+        .bg-color(@panel-color);
+
+        span {
+            line-height: 25px;
         }
     }
 }
@@ -68,6 +140,18 @@ div.main-content {
 #main-nav {
     .btn {
         border-radius: 0;
+    }
+
+    .btn-default {
+        color: @nav-bar-color;
+        background-color: #fff;
+        border-color: @nav-bar-color;
+    }
+
+    .btn-default:hover {
+        color: #fff;
+        background-color: @nav-bar-color;
+        border-color: @nav-bar-color;
     }
 }
 
@@ -80,6 +164,45 @@ footer {
 .header-footer-bg {
     .bg-color(@header-footer-color);
     color: @font-color;
+}
+
+#stages {
+    font-size: 1.2em;
+    font-weight: 600;
+    // height 500px;
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .padding(0.5em, 0.6em, 0.5em, 0.6em);
+
+    .btn {
+        // border-radius: 0;
+        width: 20em;
+        .margins(0, auto, 1.5em, auto);
+    }
+
+    // .panel {
+    //     overflow: auto;
+    //     height: 30em;
+
+    //     span {
+    //         line-height: 25px;
+    //     }
+    // }
+
+    .btn-default {
+        color: @nav-bar-color;
+        background-color: #fff;
+        border-color: @nav-bar-color;
+    }
+
+    .btn-default:hover {
+        color: #fff;
+        background-color: @nav-bar-color;
+        border-color: @nav-bar-color;
+    }
 }
 
 

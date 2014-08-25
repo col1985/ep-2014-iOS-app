@@ -13,13 +13,37 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
+        "id": "org.apache.cordova.statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+        "id": "org.apache.cordova.vibration.notification",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.device": "0.2.11",
-    "org.apache.cordova.dialogs": "0.2.9"
+    "org.apache.cordova.dialogs": "0.2.9",
+    "org.apache.cordova.statusbar": "0.1.7",
+    "org.apache.cordova.inappbrowser": "0.5.1",
+    "org.apache.cordova.vibration": "0.3.10"
 }
 // BOTTOM OF METADATA
 });

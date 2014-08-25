@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
     <head>
-        <script src="http://192.168.1.102:8080/target/target-script-min.js#anonymous"></script>
+        <!-- // <script src="http://192.168.1.102:8080/target/target-script-min.js#anonymous"></script> -->
 
         <meta charset="utf-8">
         <meta name="HandheldFriendly" content="True">
@@ -10,7 +10,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
         
-        <title>Angular iOS Template</title>
+        <title>Electric Picnic 2014</title>
         
         <!-- Will throw 404 error while developing in browser  -->
         <script src="cordova.js"></script>
@@ -27,7 +27,7 @@
 
          <!-- View Entry Point -->
         <section snap-content>
-            <app-header title="AngularJS" subtext="iOS Template"></app-header>
+            <app-header title="Electric Picnic" subtext="2014"></app-header>
             
             <div class="view-animate-container" ng-class="direction">
                 <div  ng-cloak ng-view class="view-animate"></div>
@@ -36,8 +36,8 @@
             <nav-bar></nav-bar>    
         </section>
 
-        <section snap-drawer="right" class="drawer">
-            Hello I am a drawer.
+        <section ng-controller="FavsCtrl" snap-drawer="right" class="drawer">
+            <favourites></favourites>
         </section>
 
         <!-- loading overlay --> 
@@ -64,19 +64,36 @@
         
         <!-- Services / factories -->
         <script src="services/Dialog.js"></script>
+        <script src="services/FavsManager.js"></script>
         <script src="services/AppDataFactory.js"></script>
         
         <!-- controllers -->
         <script src="controllers/MainCtrl.js"></script>
-        <script src="controllers/ApiCtrl.js"></script>
-        <script src="controllers/AboutCtrl.js"></script>
+        <script src="controllers/StagesCtrl.js"></script>
+        <script src="controllers/MapCtrl.js"></script>
         <script src="controllers/MoreCtrl.js"></script>
+        <script src="controllers/FavsCtrl.js"></script>
         
         <!-- directives -->
         <script src="directives/loading.js"></script>
+        <script src="directives/favourites.js"></script>
         <script src="directives/app-header.js"></script>
         <script src="directives/navbar.js"></script>
         <script src="directives/app-footer.js"></script>
         <script src="directives/page-title.js"></script>
+
+         <script>
+            document.addEventListener("deviceready", function() {
+                function bootstrap() {
+                    angular.bootstrap(document.body, ['app']);
+                }
+                bootstrap();
+
+                if(typeof navigator.splashscreen !== undefined) {
+                    // display splasscreen
+                    navigator.splashscreen.show();
+                }
+            }, false);
+        </script>
     </body>
 </html>
