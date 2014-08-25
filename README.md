@@ -14,7 +14,7 @@ Colúm Bennett
 ###Screenshots
 
 ![Splash](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/splash.png)
-![Home Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/home.png)
+![Home Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/Home.png)
 ![Stages Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/stages.png)
 ![Stage Section Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/stages-sections.png)
 ![Acts Page](https://github.com/col1985/ep-2014-iOS-app/raw/master/screenshots/acts-page.png)
